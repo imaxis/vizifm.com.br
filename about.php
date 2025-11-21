@@ -21,7 +21,7 @@
 
     <div class="breadcrumbs1_wrapper">
         <div class="container">
-            <div class="breadcrumbs1"><a href="index.php">Home</a><span>/</span>Sobre Nós</div>
+            <div class="breadcrumbs1"><a href="/">Home</a><span>/</span>Sobre Nós</div>
         </div>
     </div>
 
@@ -202,7 +202,7 @@
           <div class="col-sm-4">
 
             <div class="logo2_wrapper">
-              <a href="index.php" class="logo">
+              <a href="/" class="logo">
                 <img src="images/logo.png" alt="" class="img-responsive">
               </a>
             </div>

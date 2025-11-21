@@ -536,7 +536,7 @@
           <div class="col-sm-4">
 
             <div class="logo2_wrapper">
-              <a href="index.html" class="logo">
+              <a href="/" class="logo">
                 <img src="images/logo.png" alt="" class="img-responsive">
               </a>
             </div>

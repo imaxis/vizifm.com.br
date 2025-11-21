@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 0); // Não mostrar erros na produção, mas logar
 
 try {
-    include 'components/mod_head.php';
+    require_once "load_ipanel.php";
     $promocaoCtrl = new GenericCtrl("Promocao");
 
     // Pegar ID da URL (pode vir de GET ou da URL amigável)
@@ -23,14 +23,16 @@ try {
     }
 
     if (!$promocaoId || $promocaoId <= 0) {
-        header('Location: index.php');
+        $homeUrl = defined('BASE_URL') ? rtrim(BASE_URL, '/') : '/vizifmnovo.com.br';
+        header('Location: ' . $homeUrl . '/');
         exit;
     }
 
     $promocao = $promocaoCtrl->getObject($promocaoId);
 
     if (!$promocao) {
-        header('Location: index.php');
+        $homeUrl = defined('BASE_URL') ? rtrim(BASE_URL, '/') : '/vizifmnovo.com.br';
+        header('Location: ' . $homeUrl . '/');
         exit;
     }
 
@@ -52,18 +54,55 @@ try {
     }
 } catch (Exception $e) {
     error_log("Erro em promocao.php: " . $e->getMessage());
-    header('Location: index.php');
+    $homeUrl = defined('BASE_URL') ? rtrim(BASE_URL, '/') : '/vizifmnovo.com.br';
+    header('Location: ' . $homeUrl . '/');
     exit;
 }
 ?>
 <head>
+    <?php require_once "load_ipanel.php"; ?>
     <title>VIZI FM - <?php echo htmlspecialchars($promocao['titulo']); ?></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="<?php echo htmlspecialchars($promocao['premio']); ?>">
+    <meta name="keywords" content="Your keywords" />
+    <meta name="author" content="Your name" />
     <meta property="og:title" content="VIZI FM - <?php echo htmlspecialchars($promocao['titulo']); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($promocao['premio']); ?>">
     <?php if (!empty($promocao->imagem)): ?>
     <meta property="og:image" content="<?php echo $promocaoCtrl->showImage($promocao, 'Capa'); ?>">
     <?php endif; ?>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/camera.css" rel="stylesheet" />
+    <link href="css/mediaelementplayer.css" rel="stylesheet" />
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/slick-theme.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+        .locutor {
+            position: absolute;
+            left: 20%;
+            bottom: 0;
+        }
+
+        .locutorDir {
+            position: absolute;
+            right: 0;
+            bottom: -60% !important;
+        }
+
+        .locutor img,
+        .locutorDir img {
+            height: 90vh;
+            object-fit: contain;
+        }
+    </style>
+    <?php require_once './ipanel/app/core/config.php'; ?>
 </head>
 
 <body class="onepage front" data-spy="scroll" data-target="#top1" data-offset="92" onload="onload()">

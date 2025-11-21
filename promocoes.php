@@ -52,11 +52,11 @@ $promocoes = $promocaoCtrl->getObjectByField("status", "S", false, 0, 0, "id DES
                     </div>
                     <div class="txt3" style="margin-top: 20px;">
                       <?php if ($promocao['cadastro'] == 'S'): ?>
-                        <a href="promocao.php?id=<?php echo $promocao['id']; ?>" class="btn-default btn1">
+                        <a href="promocao/<?php echo $promocao['id']; ?>" class="btn-default btn1">
                           PARTICIPAR
                         </a>
                       <?php elseif (strlen($promocao['regulamento']) > 10): ?>
-                        <a href="promocao.php?id=<?php echo $promocao['id']; ?>" class="btn-default btn1">
+                        <a href="promocao/<?php echo $promocao['id']; ?>" class="btn-default btn1">
                           CONFIRA
                         </a>
                       <?php elseif (!empty($promocao['link'])): ?>

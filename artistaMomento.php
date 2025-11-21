@@ -127,7 +127,7 @@
                     <div class="col-sm-4">
 
                         <div class="logo2_wrapper">
-                            <a href="index.php" class="logo">
+                            <a href="/" class="logo">
                                 <img src="images/logo.png" alt="" class="img-responsive">
                             </a>
                         </div>

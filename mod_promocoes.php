@@ -35,11 +35,11 @@ $promocoes = $promocaoCtrl->getObjectByField("status", "S", true, 6, 0, "id DESC
                   </div>
                   <div class="txt3">
                     <?php if ($promocao['cadastro'] == 'S'): ?>
-                      <a href="promocao.php?id=<?php echo $promocao['id']; ?>" class="btn-default btn1">
+                      <a href="promocao/<?php echo $promocao['id']; ?>" class="btn-default btn1">
                         PARTICIPAR
                       </a>
                     <?php elseif (strlen($promocao['regulamento']) > 10): ?>
-                      <a href="promocao.php?id=<?php echo $promocao['id']; ?>" class="btn-default btn1">
+                      <a href="promocao/<?php echo $promocao['id']; ?>" class="btn-default btn1">
                         CONFIRA
                       </a>
                     <?php elseif (!empty($promocao['link'])): ?>
@@ -61,7 +61,7 @@ $promocoes = $promocaoCtrl->getObjectByField("status", "S", true, 6, 0, "id DESC
     <?php if (count($promocoes) > 6): ?>
       <div class="container">
         <div class="text-center" style="margin-top: 40px;">
-          <a href="promocoes.php" class="btn-default btn1">
+          <a href="promocoes" class="btn-default btn1">
             <i class="fa fa-plus"></i> VER MAIS PROMOÇÕES
           </a>
         </div>

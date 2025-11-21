@@ -1,8 +1,44 @@
 <?php
+// Função para obter o caminho base do projeto (reutilizável)
+if (!function_exists('getHomeUrl')) {
+    function getHomeUrl() {
+        // Tenta usar BASE_URL se estiver disponível
+        if (defined('BASE_URL')) {
+            $baseUrl = BASE_URL;
+            // Remove protocolo e domínio, mantendo apenas o caminho
+            $baseUrl = preg_replace('#^https?://[^/]+#', '', $baseUrl);
+            return rtrim($baseUrl, '/');
+        }
+        
+        // Detecta do SCRIPT_NAME
+        $scriptDir = dirname($_SERVER['SCRIPT_NAME']);
+        $scriptDir = str_replace('\\', '/', $scriptDir);
+        
+        // Se o script está na raiz, assume o subdiretório do RewriteBase
+        if ($scriptDir === '/' || $scriptDir === '.') {
+            // Detecta do REQUEST_URI
+            $requestUri = strtok($_SERVER['REQUEST_URI'], '?');
+            if (preg_match('#^/([^/]+)#', $requestUri, $matches)) {
+                return '/' . $matches[1];
+            }
+            // Fallback para o RewriteBase conhecido
+            return '/vizifmnovo.com.br';
+        }
+        
+        return rtrim($scriptDir, '/');
+    }
+}
+
 // Determina se estamos na página index ou outra página
-$isIndexPage = basename($_SERVER['PHP_SELF']) === 'index.php';
-$homeLink = $isIndexPage ? '#home' : 'index.php';
-$menuLinkPrefix = $isIndexPage ? '#' : 'index.php#';
+$isIndexPage = basename($_SERVER['PHP_SELF']) === 'index.php' || 
+               (isset($_SERVER['REQUEST_URI']) && 
+                (rtrim($_SERVER['REQUEST_URI'], '/') === '/vizifmnovo.com.br' || 
+                 rtrim($_SERVER['REQUEST_URI'], '/') === '/vizifmnovo.com.br/' ||
+                 preg_match('#^/vizifmnovo\.com\.br/?$#', $_SERVER['REQUEST_URI'])));
+
+$homeUrl = getHomeUrl();
+$homeLink = $isIndexPage ? '#home' : $homeUrl . '/';
+$menuLinkPrefix = $isIndexPage ? '#' : $homeUrl . '/#';
 ?>
 <div id="top1">
   <div class="top2_wrapper" id="top2">
@@ -31,14 +67,14 @@ $menuLinkPrefix = $isIndexPage ? '#' : 'index.php#';
               <ul class="nav navbar-nav sf-menu clearfix">
                 <li><a href="<?php echo $homeLink; ?>">Home</a>
                 </li>
-                <li><a href="about.php">SOBRE NÓS</a></li>
+                <li><a href="sobre">SOBRE NÓS</a></li>
                 <li><a href="#featured">PROMOÇÕES</a></li>
                 <li class="sub-menu sub-menu-1"><a href="javascript:void(0);">PÁGINAS<em></em></a>
                   <ul>
-                    <li><a href="mobile-aplication.php">APLICATIVO VIZIFM</a></li>
-                    <li><a href="channel.php">MAIS TOCADAS</a></li>
-                    <li><a href="artistaMomento.php">ARTISTA DO MOMENTO</a></li>
-                    <li><a href="patrocinadores.php">PATROCINADORES</a></li>
+                    <li><a href="aplicativo">APLICATIVO VIZIFM</a></li>
+                    <li><a href="mais-tocadas">MAIS TOCADAS</a></li>
+                    <li><a href="artista-do-momento">ARTISTA DO MOMENTO</a></li>
+                    <li><a href="patrocinadores">PATROCINADORES</a></li>
                   </ul>
                 </li>
                 <li><a href="pdf/midiakit.pdf">MidiaKit</a></li>

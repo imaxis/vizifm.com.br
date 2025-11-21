@@ -1,10 +1,22 @@
 RewriteEngine On
 RewriteBase /vizifmnovo.com.br/
 
-# Regras de roteamento para promoções
-RewriteRule ^promocao/([0-9]+)$ promocao.php?id=$1 [NC,L]
-RewriteRule ^promocao/([0-9]+)/$ promocao.php?id=$1 [NC,L]
+RewriteCond %{THE_REQUEST} \s/+(.*?/)?([^.\s?]*?)\.php[\s?] [NC]
+RewriteCond %{REQUEST_URI} !^/vizifmnovo\.com\.br/(salva_inscricao|contact|ipanel|admin|viziservidor) [NC]
+RewriteRule ^ /%1%2? [R=301,L]
 
-RewriteRule ^promocoes/$ promocoes.php [NC,L]
-RewriteRule ^promocoes$ promocoes.php [NC,L]
+RewriteRule ^promocao/([0-9]+)/?$ promocao.php?id=$1 [NC,L]
+RewriteRule ^promocoes/?$ promocoes.php [NC,L]
+
+RewriteRule ^sobre/?$ about.php [NC,L]
+RewriteRule ^contato/?$ contact.php [NC,L]
+RewriteRule ^aplicativo/?$ mobile-aplication.php [NC,L]
+RewriteRule ^mais-tocadas/?$ channel.php [NC,L]
+RewriteRule ^artista-do-momento/?$ artistaMomento.php [NC,L]
+RewriteRule ^patrocinadores/?$ patrocinadores.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
 
