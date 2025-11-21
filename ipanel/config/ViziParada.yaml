@@ -1,0 +1,66 @@
+## YAML Template.
+ViziParada:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    artista:
+      name: Artista
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    musica:
+      name: Música
+      type: string
+      size: 80
+      maxlength: 100
+      form: true
+      required: true
+      detail: true
+      strong: true
+    tipo:
+      name: Vizi Parada
+      type: select
+      size: 80
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      options: N=>Novidades, M=>Mais Tocadas
+    imagem:
+      name: Imagem
+      type: image
+      grid: false
+      form: true
+      search: false  
+      detail: true
+  uploads:
+    folder: viziParada
+  images:
+    Capa:
+      width: 65
+      height: 65
+    Interna:
+      width: 100
+      height: 130
+  searchLetterColumn: artista
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: tipo ASC
+
+  

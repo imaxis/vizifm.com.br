@@ -1,0 +1,24 @@
+# Não listar conteúdo e não permitir CGI
+Options -Indexes -ExecCGI
+
+# Nunca permitir que .ht* seja lido
+<Files ".ht*">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</Files>
+
+# Bloqueia execução/servir de scripts e arquivos perigosos
+<FilesMatch "\.(php[0-9]?|phtml|phar|phps|cgi|pl|py|sh|bash|exe|jsp|asp|aspx|shtml)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

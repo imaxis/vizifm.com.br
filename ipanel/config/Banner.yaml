@@ -1,0 +1,53 @@
+## YAML Template.
+Banner:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    link:
+      name: Link
+      type: string
+      maxlength: 255
+      grid: true
+      form: true
+      required: false
+      search: true   
+      detail: true
+    imagem:
+      name: Imagem
+      required: true
+      type: image
+      grid: false
+      form: true
+      search: false  
+      detail: true
+    target:
+      name: Abrir em
+      type: select
+      size: 1
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      value: 0
+      options: 1=>Nova aba, 0=>Mesma aba
+  uploads:
+    folder: banner
+  images:
+    Banner:
+      width: 1440
+      height: 900
+  controlClass: GenericCtrl
+  viewFile: viewDefault
+  formFile: formDefault
+  showAddButton: true
+  showEditButton: true
+  showDeleteButton: true
+  orderBy: link ASC
+
+  

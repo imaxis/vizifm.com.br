@@ -1,0 +1,65 @@
+## YAML Template.
+Publicidade:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    titulo:
+      name: Título
+      type: string
+      size: 80
+      maxlength: 50
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    link:
+      name: Link
+      type: string
+      size: 80
+      maxlength: 120
+      form: true
+      required: false
+      search: false
+      detail: false
+      strong: true
+    imagem:
+      name: Imagem
+      type: image
+      required: true
+      grid: false
+      form: true
+      search: false  
+      detail: true
+    status:
+      name: Ativa
+      type: select
+      size: 50
+      grid: true
+      form: true
+      required: true
+      search: true   
+      detail: true
+      options: S=>Sim,N=>Não
+  uploads:
+    folder: publicidade
+  images:
+    Capa:
+      width: 190
+      height: 120
+  searchLetterColumn: titulo
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: status DESC
+
+  

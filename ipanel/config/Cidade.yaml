@@ -1,0 +1,52 @@
+## YAML Template.
+Cidade:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    nome:
+      name: Nome
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    populacao:
+      name: População
+      type: string
+      size: 80
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    cidata:
+      name: Data
+      type: date
+      grid: true
+      form: true
+      required: true
+      search: false
+      formFunction: convertDateSQLtoDateBR
+      saveFunction: convertDateBRtoDateSQL
+      listFunction: convertDateSQLToDateBRExtense
+      detail: true
+  searchLetterColumn: nome
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: nome ASC
+
+  

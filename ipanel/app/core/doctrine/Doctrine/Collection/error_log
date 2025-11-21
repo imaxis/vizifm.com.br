@@ -1,0 +1,12 @@
+[05-Aug-2016 09:14:54 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Collection' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Offset.php on line 35
+[05-Aug-2016 09:14:54 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Exception.php on line 34
+[06-Aug-2016 21:26:32 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Collection' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Offset.php on line 35
+[06-Aug-2016 21:26:32 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Exception.php on line 34
+[13-Nov-2016 19:21:53 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Collection' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Offset.php on line 35
+[13-Nov-2016 19:21:53 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Exception.php on line 34
+[06-Sep-2017 12:00:25 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Collection' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Offset.php on line 35
+[06-Sep-2017 12:00:25 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Exception.php on line 34
+[14-Feb-2018 02:32:07 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Collection' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Offset.php on line 35
+[14-Feb-2018 02:32:07 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Exception.php on line 34
+[26-Apr-2018 07:14:46 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Collection' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Offset.php on line 35
+[26-Apr-2018 07:14:46 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/Collection/Exception.php on line 34

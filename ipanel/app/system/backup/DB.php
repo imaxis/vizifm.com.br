@@ -1,0 +1,140 @@
+<?php
+
+//classe DB
+class DB {
+
+    //**Atributos da classe DB
+    var $db_HOST = DB_HOST;
+    var $db_USER = DB_USER;
+    var $db_PASS = DB_PASSWORD;
+    var $banco = DB_NAME;
+    var $MSG_ERRO = "Erro ao conectar com Base de Dados";
+    var $dbc;
+
+    /*
+      //Função de Conexão com Base de Dados
+     */
+
+    function Connect() {
+        $this->dbc = mysql_connect($this->db_HOST, $this->db_USER, $this->db_PASS);
+        $m = mysql_select_db($this->banco, $this->dbc);
+        return($dbc);
+    }
+
+    /*
+      //Função de Exclusão de registros da Base de Dados
+     */
+
+    function Delete($tabela, $condicao) {
+        $tmp = "DELETE FROM $tabela WHERE $condicao";
+        $sts = mysql_query($tmp, $this->dbc) or print mysql_error($this->MSG_ERRO);
+        return($sts);
+    }
+
+    /*
+      //Função para Inserir registros na Base de Dados
+     */
+
+    function Insert($tabela, $valores) {
+        $query = "INSERT INTO $tabela VALUES( $valores )";
+        $this->Query($query);
+    }
+
+    /*
+      //Função para Listar registros da Base de Dados
+     */
+
+    function Select($campos, $tabelas, $condicao, $ordem, $limite, $agrupar) {
+        $query = "SELECT " . $campos;
+        $query.=" FROM " . $tabelas;
+        if ($condicao != 0)
+            $query.=" WHERE " . $condicao;
+        if ($agrupar != 0)
+            $query.=" GROUP BY " . $agrupar;
+        if ($ordem != 0)
+            $query.=" ORDER BY " . $ordem;
+        if ($limite != 0)
+            $query.="LIMIT " . $limite;
+        $sts = mysql_query($query, $this->dbc) or print mysql_error($MSG_ERRO);
+        return ($sts);
+    }
+
+    /*
+      //Função para executar uma Query na Base de Dados
+     */
+
+    function Query($sql) {
+        return mysql_query($sql, $this->dbc);
+    }
+
+    /*
+      //Função para Atualizar registros da Base de Dados
+     */
+
+    function Update($tabela, $campos, $condicao) {
+        $tmp = "UPDATE $tabela SET $campos WHERE $condicao";
+        $sts = mysql_query($tmp, $this->dbc);
+    }
+
+    /*
+      //Função para retornar o último id de uma Inserção
+     */
+
+    function LastID() {
+        return mysql_insert_id($this->dbc);
+    }
+
+    /*
+      //Função para retornar o array de consulta de uma Query
+     */
+
+    function Fetch($sql) {
+        return mysql_fetch_array($sql);
+    }
+
+    /*
+      //Função para retornar a qtde de linhas afetadas em uma Query
+     */
+
+    function Rows($query) {
+        $tmp = mysql_num_rows($query);
+        return($tmp);
+    }
+
+    /*
+      //Função para liberar a memória de uma Query
+     */
+
+    function FreeDB($query) {
+        $tmp = mysql_free_result($query);
+        return($tmp);
+    }
+
+    /*
+      //Função para liberar a memória de uma Query
+     */
+
+    function ListTables($dbName) {
+        $tmp = mysql_list_tables($dbName);
+        return($tmp);
+    }
+
+    /*
+      //Função para liberar a memória de uma Query
+     */
+
+    function Error($dbName) {
+        mysql_error();
+    }
+
+    /*
+      //Função para Fechar conexão com a Base de Dados
+     */
+
+    function Close() {
+        mysql_close($this->dbc);
+    }
+
+}
+
+?>

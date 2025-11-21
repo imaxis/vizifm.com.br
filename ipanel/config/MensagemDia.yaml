@@ -1,0 +1,73 @@
+## YAML Template.
+MensagemDia:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    titulo:
+      name: Título
+      type: string
+      size: 80
+      maxlength: 50
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    autor:
+      name: Autor
+      type: string
+      size: 80
+      maxlength: 40
+      grid: true
+      form: true
+      required: false
+      search: true
+      detail: true
+    dtExibicao:
+      name: Data de Exibição da Mensagem
+      type: date
+      grid: true
+      form: true
+      required: true
+      search: true
+      formFunction: convertDateSQLtoDateBR
+      saveFunction: convertDateBRtoDateSQL
+      listFunction: convertDateSQLToDateBRExtense
+    mensagem:
+      name: Mensagem
+      type: text
+      size: 80
+      maxlength: 355
+      grid: false
+      editor: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    arquivo:
+      name: Arquivo
+      type: file
+      size: 80
+      grid: true
+      form: true
+      required: true
+      search: false
+      detail: true
+      obsform: Envie o áudio da mensagem do dia (MP3).
+  uploads:
+    folder: mensagemDia
+  searchLetterColumn: titulo
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formMensagemDia
+  orderBy: id DESC

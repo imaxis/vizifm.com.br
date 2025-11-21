@@ -1,0 +1,98 @@
+## YAML Template.
+Programa:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: false
+    nome:
+      name: Nome
+      type: string
+      size: 50
+      maxlength: 40
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+    inicio:
+      name: Inicio
+      type: time
+      mask: 99:99
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+    fim:
+      name: Fim
+      type: time
+      mask: 99:99
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+    dia:
+      name: Dias
+      type: select
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      options: Segunda - Sexta, Sábado, Domingo
+    descricao:
+      name: Descrição
+      type: string
+      size: 80
+      maxlength: 80  
+      grid: false
+      form: true
+      required: true
+      search: true
+      detail: true      
+    imagem:
+      name: Imagem
+      type: image
+      grid: false
+      form: true
+      search: false  
+      detail: true
+    lcId:
+      name: Locutor
+      type: subselect
+      relation: Locutor
+      relationField: id
+      labelField: nome
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: false
+    locutor.nome:
+      name: Locutor
+      type: string
+      grid: true
+      form: false
+      search: false
+      required: false
+      detail: true      
+  uploads:
+    folder: programas
+  images:
+    Capa:
+      width: 800
+      height: 450
+  searchLetterColumn: nome
+  controlClass: GenericCtrl
+  viewFile: viewDefault
+  formFile: formDefault
+  showAddButton: true
+  showEditButton: true
+  showDeleteButton: true
+  orderBy: nome ASC
+  

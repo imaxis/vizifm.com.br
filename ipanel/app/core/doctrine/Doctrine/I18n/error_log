@@ -1,0 +1,6 @@
+[05-Aug-2016 09:14:47 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/I18n/Exception.php on line 34
+[06-Aug-2016 21:26:29 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/I18n/Exception.php on line 34
+[13-Nov-2016 19:21:49 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/I18n/Exception.php on line 34
+[06-Sep-2017 12:00:20 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/I18n/Exception.php on line 34
+[14-Feb-2018 02:32:00 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/I18n/Exception.php on line 34
+[26-Apr-2018 07:14:42 America/Sao_Paulo] PHP Fatal error:  Class 'Doctrine_Exception' not found in /home/imaxis/public_html/vizifmnovo.com.br/ipanel/app/core/doctrine/Doctrine/I18n/Exception.php on line 34

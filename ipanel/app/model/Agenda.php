@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Promocao
+ *
+ * Classe modelo para utilização do Doctrine
+ *
+ * @property serial $id
+ * @property string $agData
+ * @property string $atracao
+ * @property string $local
+ * @property string $descricao
+ *
+ * @package    application
+ * @subpackage model
+ * @author     iMAXIS
+ */
+class Agenda extends Doctrine_Record
+{
+    
+    /**
+     * Define os tipos de campos a serem utilizados para manutenção da tabela no banco de dados
+     * Para cada campo é preciso ter uma variável definida com o mesmo nome.<br>
+     * Ex: para o campo usr_email as email deve haver uma variável chamada $email adicionada <br>
+     * nas linhas iniciais da classe como @property type $email(ex)
+     * 
+     * @return void  
+     */
+    public function setTableDefinition()
+    {
+        $this->setTableName('agenda');
+        $this->hasColumn('age_id as id', 'integer', null, array(
+             'type' => 'integer',
+             'primary' => true,
+             ));
+        $this->hasColumn('age_atracao as atracao', 'string', 100, array(
+             'type' => 'string',
+             'length' => '100',
+             ));
+        $this->hasColumn('age_local as local', 'text', null, array(
+             'type' => 'text',
+             ));
+        $this->hasColumn('age_descricao as descricao', 'string', 100, array(
+             'type' => 'string',
+             'length' => '100',
+             ));
+        $this->hasColumn('age_data as agData', 'date', null, array(
+             'type' => 'date',
+             ));
+    }
+}

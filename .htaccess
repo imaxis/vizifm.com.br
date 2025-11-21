@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /vizifmnovo.com.br/
+
+# Regras de roteamento para promoções
+RewriteRule ^promocao/([0-9]+)$ promocao.php?id=$1 [NC,L]
+RewriteRule ^promocao/([0-9]+)/$ promocao.php?id=$1 [NC,L]
+
+RewriteRule ^promocoes/$ promocoes.php [NC,L]
+RewriteRule ^promocoes$ promocoes.php [NC,L]
+

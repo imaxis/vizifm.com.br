@@ -1,0 +1,91 @@
+## YAML Template.
+Usuario:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: false
+    nome:
+      name: Nome
+      type: string
+      size: 40
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+    status:
+      name: Status
+      type: select
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      listFunction: getStatusGeral
+      options: A=>Ativo, I=>Inativo
+    email:
+      name: Email
+      type: email
+      size: 40
+      grid: false
+      form: true
+      required: true
+      search: false
+      detail: true
+    telefone:
+      name: Telefone
+      type: string
+      size: 15
+      grid: false
+      form: true
+      mask: (99) 9999-9999
+      required: false
+      search: false
+      detail: true
+    login:
+      name: Login
+      type: string
+      size: 25
+      maxlenght: 25
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+    senha:
+      name: Senha
+      type: password
+      size: 25
+      maxlenght: 255
+      grid: false
+      form: true
+      required: true
+      search: false
+      saveFunction: cript
+      formFunction: deCript
+      detail: false
+    dataCadastro:
+      name: Cadastro
+      type: date
+      grid: true
+      form: false
+      required: false
+      search: false
+      auto: true
+      saveFunction: getActualDate
+      listFunction: convertDateSQLToDateBRExtense
+      detail: true
+  searchLetterColumn: nome
+  controlClass: GenericCtrl
+  viewFile: viewDefault
+  formFile: formUsuario
+  orderBy: nome
+  showAddButton: true
+  showEditButton: true
+  showDeleteButton: true
+
+  

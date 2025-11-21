@@ -1,0 +1,94 @@
+## YAML Template.
+Musicas:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    nomeMusica:
+      name: Nome da Música
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    artista:
+      name: Artista
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      editor: true
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    genero:
+      name: Gênero
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: false
+      search: true
+      detail: true
+    canal:
+      name: Canal
+      type: select
+      size: 40
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      options: Radio=>Rádio, Spotify=>Spotify
+    url:
+      name: URL
+      type: string
+      size: 80
+      maxlength: 255
+      grid: false
+      form: true
+      required: true
+      search: true
+      detail: true
+      obsform: Informe a URL completa da música no Spotify.
+    arquivo:
+      name: Arquivo
+      type: file
+      size: 80
+      grid: false
+      form: true
+      required: true
+      search: false
+      detail: true
+      obsform: Envie o arquivo da música (MP3).
+    rankingSemanal:
+      name: Ranking Semanal
+      type: select
+      size: 40
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      options: s=>SIM, n=>NÃO
+  uploads:
+    folder: musicas
+  searchLetterColumn: nomeMusica
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formMusicas
+  orderBy: rankingSemanal DESC

@@ -1,0 +1,51 @@
+## YAML Template.
+Video:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    titulo:
+      name: Título
+      type: string
+      size: 80
+      maxlength: 55
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    descricao:
+      name: Descrição
+      type: string
+      size: 80
+      maxlength: 70
+      grid: false
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    link:
+      name: Link
+      type: string
+      size: 80
+      maxlength: 100
+      form: true
+      required: true
+      detail: true
+      strong: true
+  searchLetterColumn: titulo
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: id DESC
+
+  

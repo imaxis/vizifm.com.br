@@ -1,0 +1,359 @@
+## YAML Template.
+Promocao:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    titulo:
+      name: Título
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    regulamento:
+      name: Regulamento
+      type: text
+      editor: true
+      form: true
+      required: false
+      strong: true
+    premio:
+      name: Prêmios
+      type: string
+      size: 80
+      maxlength: 100
+      form: true
+      required: true
+      detail: true
+      strong: true
+    status:
+      name: Promoção Ativa
+      type: select
+      size: 80
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      options: S=>Sim, N=>Não
+    cadastro:
+      name: Necessita de Cadastro
+      type: select
+      size: 80
+      grid: false
+      form: true
+      required: true
+      search: true
+      detail: true
+      options: S=>Sim, N=>Não
+    link:
+      name: Link
+      obsform: Informe o link para onde será feito o redirecionamento.
+      type: string
+      maxlength: 255
+      grid: false
+      form: true
+      required: false
+      search: true   
+      detail: true
+      showIf: value@cadastro=N
+    endereco:
+      name: Necessário informar o endereço?
+      type: checkbox
+      grid: false
+      form: true
+      detail: true
+      value: S
+    facebook:
+      name: Necessário informar o facebook?
+      type: checkbox
+      grid: false
+      form: true
+      detail: true
+      value: S
+    instagram:
+      name: Necessário informar o instagram?
+      type: checkbox
+      grid: false
+      form: true
+      detail: true
+      value: S
+    email:
+      name: Necessário informar o E-mail?
+      type: checkbox
+      grid: false
+      form: true
+      detail: true
+      value: S
+    cpf:
+      name: Necessário informar o CPF?
+      type: checkbox
+      grid: false
+      form: true
+      detail: true
+      value: S
+    pix:
+      name: Necessário informar uma chave PIX?
+      type: checkbox
+      grid: false
+      form: true
+      detail: true
+      value: S
+    dtNascimento:
+      name: Necessário informar a Data de Nascimento?
+      type: checkbox
+      grid: false
+      form: true
+      detail: true
+      value: S
+    aniverSemana:
+      name: Aniversariante na semana?
+      obsform: Marque esta opção para permitir a inscrição apenas para aniversariantes da semana.
+      type: checkbox
+      grid: false
+      form: true
+      detail: true
+      value: S
+    imagem:
+      name: Imagem
+      type: image
+      grid: false
+      form: true
+      search: false  
+      detail: true
+    pergunta_1:
+      name: Pergunta 01
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_2:
+      name: Pergunta 02
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_3:
+      name: Pergunta 03
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_4:
+      name: Pergunta 04
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_5:
+      name: Pergunta 05
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_6:
+      name: Pergunta 06
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_7:
+      name: Pergunta 07
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_8:
+      name: Pergunta 08
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_9:
+      name: Pergunta 09
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_10:
+      name: Pergunta 10
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_11:
+      name: Pergunta 11
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_12:
+      name: Pergunta 12
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_13:
+      name: Pergunta 13
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_14:
+      name: Pergunta 14
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    pergunta_15:
+      name: Pergunta 15
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    termos:
+      name: Termos e Condições
+      type: text
+      editor: true
+      form: true
+      required: false
+      strong: true
+    pergunta_select:
+      name: Pergunta para campos de Seleção
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    resposta_select:
+      name: Respostas para pergunta de seleção
+      type: string
+      size: 80
+      maxlength: 100
+      grid: false
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+      obsform: Você deve separar as opções resposta com ; (ponto e vírgula)
+  relations:
+    Participantes:
+      title: Inscritos
+      type: url
+      target: blank
+      relationFields: id
+      url: ../view/inscritosPromocao.php
+    Sorteio:
+      title: Sorteio
+      type: url
+      target: blank
+      relationFields: id
+      url: ../view/sorteioPromocao.php
+  uploads:
+    folder: promocoes
+  images:
+    Capa:
+      width: 280
+      height: 238
+    Interna:
+      width: 1280
+      height: 720
+  searchLetterColumn: titulo
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: id DESC
+
+  

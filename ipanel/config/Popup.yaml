@@ -1,0 +1,62 @@
+Popup:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    titulo:
+      name: Titulo
+      type: string
+      size: 80
+      maxlength: 140
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    status:
+      name: Pop-up Ativo
+      type: select
+      size: 80
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      options: S=>Sim, N=>Não
+    link:
+      name: Link
+      type: string
+      maxlength: 255
+      grid: true
+      form: true
+      required: false
+      search: true   
+      detail: true
+    imagem:
+      name: Imagem
+      required: false
+      type: image
+      grid: false
+      form: true
+      search: false  
+      detail: true
+  uploads:
+    folder: popup
+  images:
+    Banner:
+      width: 600
+      height: 600
+  controlClass: GenericCtrl
+  viewFile: viewDefault
+  formFile: formDefault
+  showAddButton: true
+  showEditButton: true
+  showDeleteButton: true
+  orderBy: titulo ASC
+
+  

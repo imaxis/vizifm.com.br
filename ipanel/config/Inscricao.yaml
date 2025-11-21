@@ -1,0 +1,95 @@
+## YAML Template.
+Inscricao:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    proId:
+      name: Promoção
+      type: subselect
+      size: 80
+      maxlength: 60
+      grid: false
+      form: true
+      required: true
+      search: true
+      detail: true 
+      relation: Promocao
+      relationField: id
+      labelField: titulo
+      labelFieldGrid: titulo
+    nome:
+      name: Nome
+      type: string
+      size: 80
+      maxlength: 60
+      grid: true
+      form: true
+      required: true
+      search: true   
+      detail: true
+    nascimento:
+      name: Data de Nascimento
+      type: date
+      grid: true
+      form: true
+      required: true
+      search: false
+      formFunction: convertDateSQLtoDateBR
+      saveFunction: convertDateBRtoDateSQL
+      listFunction: convertDateSQLToDateBRExtense
+      detail: true
+    telefone:
+      name: Telefone
+      type: string
+      size: 13
+      maxlength: 14
+      grid: true
+      form: true
+      required: true
+      search: true   
+      detail: true
+      mask: '(99)99999-9999'
+    cidade:
+      name: Cidade
+      type: string
+      size: 80
+      maxlength: 50
+      grid: false
+      form: true
+      required: true
+      search: true   
+      detail: true
+    bairro:
+      name: Bairro
+      type: string
+      size: 80
+      maxlength: 50
+      grid: false
+      form: true
+      required: false
+      search: true   
+      detail: true
+    mensagem:
+      name: Mensagem
+      type: text
+      size: 10
+      maxlength: 355
+      grid: false
+      form: true
+      required: false
+      search: true   
+      detail: true
+  controlClass: GenericCtrl
+  viewFile: viewDefault
+  formFile: formDefault
+  showAddButton: true
+  showEditButton: true
+  showDeleteButton: false
+  orderBy: id DESC
+
+  

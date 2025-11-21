@@ -1,0 +1,93 @@
+## YAML Template.
+ViziMidia:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    titulo:
+      name: Título
+      type: string
+      size: 80
+      maxlength: 45
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    data:
+      name: Data
+      type: date
+      grid: true
+      form: true
+      required: true
+      search: true
+      formFunction: convertDateSQLtoDateBR
+      saveFunction: convertDateBRtoDateSQL
+      listFunction: convertDateSQLToDateBRExtense
+    descricao:
+      name: Descrição
+      type: string
+      size: 80
+      maxlength: 60
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    conteudo:
+      name: Conteúdo
+      type: text
+      size: 80
+      maxlength: 2000
+      grid: false
+      editor: true
+      form: true
+      required: false
+      search: false
+      detail: true
+    autor:
+      name: Autor
+      type: string
+      size: 80
+      maxlength: 45
+      grid: true
+      form: true
+      required: false
+      search: true
+      detail: true
+    imgMin:
+      name: Imagem Miniatura
+      type: file
+      size: 80
+      grid: true
+      form: true
+      required: true
+      search: false
+      detail: true
+      obsform: Envie a imagem Miniatura para Exibição na página Inicial 59x59
+    imgBanner:
+      name: Imagem Banner para página Interna
+      type: file
+      size: 80
+      grid: true
+      form: true
+      required: true
+      search: false
+      detail: true
+      obsform: Envie a imagem Maior para Exibição na página Interna 1920x1080
+  uploads:
+    folder: viziMidia
+  searchLetterColumn: titulo
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: id DESC

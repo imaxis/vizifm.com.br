@@ -1,0 +1,59 @@
+## YAML Template.
+Wallpaper:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    titulo:
+      name: Nome
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: true
+      search: true   
+      detail: true
+    ativo:
+      name: Ativo
+      type: select
+      size: 50
+      grid: true
+      form: true
+      required: true
+      search: true   
+      detail: true
+      options: S=>Sim,N=>Não
+    imagem:
+      name: Imagem
+      type: image
+      grid: false
+      form: true
+      search: false  
+      detail: true
+    waldata:
+      name: Data de Cadastro
+      type: date
+      grid: true
+      search: false
+      auto: true
+      saveFunction: getActualDate
+      listFunction: convertDateSQLToDateBRExtense
+      updatable: false
+      detail: true
+  uploads:
+    folder: wallpaper
+  searchLetterColumn: titulo
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: ativo ASC  
+
+  

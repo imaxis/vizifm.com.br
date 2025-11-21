@@ -1,0 +1,51 @@
+Categoria:
+  tableName: categorias
+  columns:
+    cat_id:
+      name: cat_id as id
+      type: serial
+      primary: true
+    cat_nome:
+      name: cat_nome as nome
+      type: string(120)
+    cat_data:
+      name: cat_data as data
+      type: date
+  relations:
+    plano:
+      local: cat_id
+      foreign: cat_id
+      class: Plano
+      type: many
+  mapClass: model.Categoria
+
+
+Plano:
+  tableName: planos
+  columns:
+    pln_id:
+      name: pln_id as id
+      type: serial
+      primary: true
+    cat_id:
+      name: cat_id as clId
+      type: integer
+    pln_nome:
+      name: pln_nome as nome
+      type: string(250)
+    pln_descricao:
+      name: pln_descricao as descricao
+      type: text
+    pln_tipo:
+      name: pln_tipo as tipo
+      type: string(1)
+    pln_data:
+      name: pln_data as data
+      type: date
+  relations:
+      cliente:
+        local: cat_id
+        foreign: cat_id
+        class: Categoria
+        type: one
+  mapClass: model.Plano

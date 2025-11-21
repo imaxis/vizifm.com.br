@@ -1,0 +1,121 @@
+## YAML Template.
+Setores:
+  Iniciar:
+    Iniciar:
+      name: P�gina Inicial
+      descriptionMenu: Retornar � p�gina inicial
+      mode: Inicio
+      imagem: inicioMenu.png
+    Analytics:
+      name: Google Analytics
+      descriptionMenu: Estat�sticas de acesso
+      link: https://www.google.com/accounts/ServiceLogin?service=analytics&passive=true&nui=1&hl=pt_BR
+      target: _blank
+      imagem: analyticsMenu.png
+    VisualizarSite:
+      name: Abrir site
+      descriptionMenu: Abrir site em nova janela
+      link: http://www.continentalfm.com.br
+      target: _blank
+      imagem: verSiteMenu.png
+    Webmail:
+      name: Webmail
+      descriptionMenu: Acesso ao webmail
+      link: http://webmail.continentalfm.com.br
+      target: _blank
+      imagem: webmailMenu.png
+  Site:
+    Wallpaper:
+      name: Plano de Fundo
+      mode: Lista
+      descriptionMenu: Cadastro de Planos de Fundo
+      description: Confira os os planos de fundo cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Locutor:
+      name: Colaboradores
+      mode: Lista
+      descriptionMenu: Cadastro de Colaboradores
+      description: Confira os colaboradores cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Programa:
+      name: Programas
+      mode: Lista
+      descriptionMenu: Cadastro de Programas
+      description: Confira a nossa programação.
+      actions: Incluir, Alterar, Excluir
+    Mural:
+      name: Mural
+      mode: Lista
+      descriptionMenu: Cadastro de Mural
+      description: Confira a relação de murais.
+      actions: Incluir, Alterar, Excluir
+    Agenda:
+      name: Agenda
+      mode: Lista
+      descriptionMenu: Cadastro de Eventos
+      description: Confira a relação de eventos cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Noticia:
+      name: Not�cias
+      mode: Lista
+      descriptionMenu: Cadastro de Notícias
+      description: Confira a rela��o de not�cias cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Publicidade:
+      name: Publicidades
+      mode: Lista
+      descriptionMenu: Cadastro de Publicidades
+      description: Confira a rela��o de publicidades cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Video:
+      name: Videos
+      mode: Lista
+      descriptionMenu: Cadastro de Videos
+      description: Confira a rela��o de videos cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Musicas:
+      name: Músicas
+      mode: Lista
+      descriptionMenu: Cadastro de Músicas
+      description: Confira as músicas cadastradas no sistema.
+      actions: Incluir, Alterar, Excluir
+    Enquete:
+      name: Enquete
+      mode: Lista
+      descriptionMenu: Cadastro de Enquete
+      description: Confira as enquetes cadastradas no sistema.
+      actions: Incluir, Alterar, Excluir
+    ViziParada:
+      name: Vizi Parada
+      mode: Lista
+      descriptionMenu: Cadastro de M�sicas Mais Tocadas e Lan�amentos
+      description: Confira as m�sicas cadastradas no sistema.
+      actions: Incluir, Alterar, Excluir
+    Cidade:
+      name: Abrang�ncia
+      mode: Lista
+      descriptionMenu: Cadastro de Cidades da Abrang�ncia Conti FM
+      description: Confira as cidades cadastradas no sistema.
+      actions: Incluir, Alterar, Excluir
+  ## Promo��es:
+  Promo��es:
+    Promocao:
+      name: Promo��es
+      mode: Lista
+      descriptionMenu: Cadastro de Promo��es
+      description: Confira os os promo��es cadastrados.
+      actions: Incluir, Alterar, Excluir
+  Sistema:
+    Usuario:
+      name: Usu�rios
+      alias: Usu�rios
+      mode: Lista
+      descriptionMenu: Controle de logins
+      description: Confira os logins e permiss�es de acesso cadastrados no portal.
+      actions: Incluir, Alterar, Excluir
+    Backup:
+      name: Backup
+      mode: Form
+      descriptionMenu: C�pia dos dados
+      description: Geração de backup dos dados do portal.
+      actions: Gerar

@@ -1,0 +1,163 @@
+## YAML Template.
+Setores:
+  Iniciar:
+    Iniciar:
+      name: Página Inicial
+      descriptionMenu: Retornar á página inicial
+      mode: Inicio
+      imagem: inicioMenu.png
+    Analytics:
+      name: Google Analytics
+      descriptionMenu: Estatísticas de acesso
+      link: https://www.google.com/accounts/ServiceLogin?service=analytics&passive=true&nui=1&hl=pt_BR
+      target: _blank
+      imagem: analyticsMenu.png
+    VisualizarSite:
+      name: Abrir site
+      descriptionMenu: Abrir site em nova janela
+      link: http://vizifmnovo.com.br
+      target: _blank
+      imagem: verSiteMenu.png
+    Webmail:
+      name: Webmail
+      descriptionMenu: Acesso ao webmail
+      link: http://webmail.vizifmnovo.com.br
+      target: _blank
+      imagem: webmailMenu.png
+  Site:
+    Banner:
+      name: Banner
+      mode: Lista
+      descriptionMenu: Cadastro de banner do site
+      description: Confira o banner cadastrado.
+      actions: Alterar
+    Locutor:
+      name: Colaboradores
+      mode: Lista
+      descriptionMenu: Cadastro de Colaboradores
+      description: Confira os colaboradores cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Programa:
+      name: Programas
+      mode: Lista
+      descriptionMenu: Cadastro de Programas
+      description: Confira a nossa programação.
+      actions: Incluir, Alterar, Excluir
+    Musicas:
+      name: Músicas
+      mode: Lista
+      descriptionMenu: Cadastro de Músicas mais Tocadas
+      description: Confira as músicas mais tocadas da semana
+      actions: Incluir, Alterar, Excluir
+    artistaMomento:
+      name: Artista do Momento
+      mode: Lista
+      descriptionMenu: Cadastro de Artista do Momento
+      description: Cadastre o artista do momento com suas músicas
+      actions: Incluir, Alterar, Excluir
+    MensagemDia:
+      name: Mensagem do dia
+      mode: Lista
+      descriptionMenu: Cadastro da Mensagem do dia
+      description : Cadastre a mensagem do dia e, se desejar, programe também as mensagens dos próximos dias
+      actions: Incluir, Alterar, Excluir
+    ViziMidia:
+      name: Vizi na Mídia
+      mode: Lista
+      descriptionMenu: Cadastro de assuntos da VIZIFM
+      description: Cadastre e Atualize as mídias da VIZIFM
+      actions: Incluir, Alterar, Excluir
+    #    Mural:
+    #      name: Mural
+    #      mode: Lista
+    #      descriptionMenu: Cadastro de Mural
+    #      description: Confira a relação de murais.
+    #      actions: Incluir, Alterar, Excluir
+    #    Agenda:
+    #      name: Agenda
+    #      mode: Lista
+    #      descriptionMenu: Cadastro de Eventos
+    #      description: Confira a relação de eventos cadastrados.
+    #      actions: Incluir, Alterar, Excluir
+    #    Noticia:
+    #      name: Notícias
+    #      mode: Lista
+    #      descriptionMenu: Cadastro de Notícias
+    #      description: Confira a relação de notícias cadastrados.
+    #      actions: Incluir, Alterar, Excluir
+    #    Publicidade:
+    #      name: Publicidades
+    #      mode: Lista
+    #      descriptionMenu: Cadastro de Publicidades
+    #      description: Confira a relação de publicidades cadastrados.
+    #      actions: Incluir, Alterar, Excluir
+    #    Video:
+    #      name: Videos
+    #      mode: Lista
+    #      descriptionMenu: Cadastro de Videos
+    #      description: Confira a relação de videos cadastrados.
+    #      actions: Incluir, Alterar, Excluir
+    #    Enquete:
+    #      name: Enquete
+    #      mode: Lista
+    #      descriptionMenu: Cadastro de Enquete
+    #      description: Confira as enquetes cadastradas no sistema.
+    #      actions: Incluir, Alterar, Excluir
+    #    ViziParada:
+    #      name: Vizi Parada
+    #      mode: Lista
+    #      descriptionMenu: Cadastro de Músicas Mais Tocadas e Lançamentos
+    #      description: Confira as músicas cadastradas no sistema.
+    #      actions: Incluir, Alterar, Excluir
+    Cidade:
+      name: Abrangência
+      mode: Lista
+      descriptionMenu: Cadastro de Cidades da Abrangência Conti FM
+      description: Confira as cidades cadastradas no sistema.
+      actions: Incluir, Alterar, Excluir
+    Patrocinadores:
+      name: Patrocinadores
+      mode: Lista
+      descriptionMenu: Cadastro de Patrocinadores
+      description: Confira os patrocinadores cadastrados.
+      actions: Incluir, Alterar, Excluir
+  ## Promoções:
+  Promoções:
+    Popup:
+      name: Pop-up
+      mode: Lista
+      descriptionMenu: Cadastro de Pop-up's
+      description: Confira a relação de Pop-up's cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Promocao:
+      name: Promoções
+      mode: Lista
+      descriptionMenu: Cadastro de Promoções
+      description: Confira os os promoções cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Inscricao:
+      name: Inscrições
+      mode: Lista
+      descriptionMenu: Cadastro de Inscritos
+      description: Confira os locutores cadastrados.
+      actions: Incluir, Alterar, Excluir
+    Ganhador:
+      name: Ganhadores
+      mode: Lista
+      descriptionMenu: Ganhadores das promoções
+      description: Confira os ganhadores.
+      actions: Incluir
+  Sistema:
+    Usuario:
+      name: Usuários
+      alias: Usuários
+      mode: Lista
+      descriptionMenu: Controle de logins
+      description: Confira os logins e permissões de acesso cadastrados no portal.
+      actions: Incluir, Alterar, Excluir
+    Backup:
+      name: Backup
+      mode: Form
+      descriptionMenu: Cópia dos dados
+      description: Geração de backup dos dados do portal.
+      actions: Gerar

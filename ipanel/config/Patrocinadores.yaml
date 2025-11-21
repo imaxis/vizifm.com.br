@@ -1,0 +1,85 @@
+## YAML Template.
+Patrocinadores:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    nome:
+      name: Nome
+      type: string
+      size: 80
+      maxlength: 150
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    setor:
+      name: Setor
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: false
+      search: true
+      detail: true
+    sobre:
+      name: Sobre
+      type: text
+      size: 80
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+      obsform: Descrição sobre o patrocinador
+    localizacao:
+      name: Localização
+      type: string
+      size: 80
+      maxlength: 255
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+      obsform: Endereço completo do patrocinador
+    link:
+      name: Link
+      type: string
+      size: 80
+      maxlength: 255
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+      obsform: URL do site ou página do patrocinador
+    imagem:
+      name: Imagem
+      required: false
+      type: image
+      grid: false
+      form: true
+      search: false
+      detail: true
+  uploads:
+    folder: patrocinadores
+  images:
+    Capa:
+      width: 400
+      height: 400
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: nome ASC
+

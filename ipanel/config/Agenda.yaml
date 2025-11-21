@@ -1,0 +1,60 @@
+## YAML Template.
+Agenda:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    atracao:
+      name: Atração
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    local:
+      name: Local
+      type: string
+      size: 80
+      maxlength: 100
+      form: true
+      required: true
+      detail: true
+      strong: true
+    descricao:
+      name: Descricao
+      type: string
+      size: 80
+      maxlength: 100
+      form: true
+      required: true
+      detail: true
+      strong: true
+    agData:
+      name: Dia do Evento
+      type: date
+      grid: true
+      form: true
+      required: true
+      search: false
+      formFunction: convertDateSQLtoDateBR
+      saveFunction: convertDateBRtoDateSQL
+      listFunction: convertDateSQLToDateBRExtense
+      detail: true
+  searchLetterColumn: titulo
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: agData DESC
+
+  

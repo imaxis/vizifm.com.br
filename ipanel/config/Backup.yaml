@@ -1,0 +1,56 @@
+## YAML Template.
+Backup:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    titulo:
+      name: Título
+      type: string
+      size: 100
+      grid: true
+      strong: true
+      form: true
+      required: true
+      search: true   
+      detail: true
+    arquivo:
+      name: Arquivo
+      type: file
+      grid: false
+      form: false
+      search: false  
+      detail: true
+    bkpdata:
+      name: Data da Geração
+      type: date
+      grid: true
+      search: false
+      auto: true
+      saveFunction: getActualDate
+      listFunction: convertDateSQLToDateBRExtense
+      updatable: false
+      detail: true
+    hora:
+      name: Hora
+      type: time
+      grid: true
+      search: false
+      auto: true
+      saveFunction: getActualTime
+      updatable: false
+      detail: true
+  uploads:
+    folder: backups
+  searchLetterColumn: titulo
+  controlClass: GenericCtrl
+  viewFile: viewDefault
+  formFile: formDefault
+  showAddButton: true
+  showEditButton: true
+  showDeleteButton: true
+  orderBy: bkpdata DESC, hora DESC

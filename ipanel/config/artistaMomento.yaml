@@ -1,0 +1,130 @@
+## YAML Template.
+artistaMomento:
+  fields:
+    id:
+      name: Id
+      type: integer
+      grid: false
+      required: false
+      search: false
+      detail: true
+    nomeArtista:
+      name: Nome do Artista
+      type: string
+      size: 80
+      maxlength: 100
+      grid: true
+      form: true
+      required: false
+      search: true
+      detail: true
+      strong: true
+    musicaPrincipal:
+      name: Música Principal
+      type: string
+      size: 80
+      maxlength: 75
+      grid: true
+      form: true
+      required: true
+      search: true
+      detail: true
+      strong: true
+    musica2:
+      name: Música 2
+      type: string
+      size: 80
+      maxlength: 75
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+    musica3:
+      name: Música 3
+      type: string
+      size: 80
+      maxlength: 75
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+    musica4:
+      name: Música 4
+      type: string
+      size: 80
+      maxlength: 75
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+    musica5:
+      name: Música 5
+      type: string
+      size: 80
+      maxlength: 75
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+    musica6:
+      name: Música 6
+      type: string
+      size: 80
+      maxlength: 75
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+    musica7:
+      name: Música 7
+      type: string
+      size: 80
+      maxlength: 75
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+    musica8:
+      name: Música 8
+      type: string
+      size: 80
+      maxlength: 75
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+    musica9:
+      name: Música 9
+      type: string
+      size: 80
+      maxlength: 75
+      grid: false
+      form: true
+      required: false
+      search: false
+      detail: true
+    imagem:
+      name: Imagem
+      required: false
+      type: image
+      grid: false
+      form: true
+      search: false
+      detail: true
+  uploads:
+    folder: artistaMomento
+  controlClass: GenericCtrl
+  showEditButton: true
+  showDeleteButton: true
+  showAddButton: true
+  viewFile: viewDefault
+  formFile: formDefault
+  orderBy: nomeArtista ASC
+
